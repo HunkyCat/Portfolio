@@ -1,27 +1,43 @@
 
-# Улучшение процесса обогащения золота
+# Предсказание оттока клиентов
 
 ## Описание проекта
 
-Требуется подготовить прототип модели машинного обучения, которая должна предсказать коэффициент восстановления золота из золотосодержащей руды. Модель поможет оптимизировать производство, чтобы не запускать предприятие с убыточными характеристиками.
+Необходимо написать модель, которая должна предсказать кто из клиентов, скорее всего, перестанет пользоваться услугами компании. Модель поможет заранее определять таких клиентов, чтобы у компании была возможность попытаться их удержать ("задобрить" промокодами и специальными условиями).
 
 ## Навыки и инструменты:
 
- - **python**
- - **pandas** 
- - **numpy** 
+ - **pandas**
+ - **pandas_profiling**
+ - **phik**
  - **plotly**
- - **plotly.express**
- - sklearn.metrics.**mean_absolute_error**
- - sklearn.ensemble.**BaggingRegressor**
+ - **optuna**
+ - **matplotlib**
+ - imblearn.over_sampling.**SMOTE**
+
+sklearn
+
+ - sklearn.model_selection.**train_test_split**
+ - sklearn.linear_model.**LogisticRegression**
+ - sklearn.metrics.**roc_auc_score**
+ - sklearn.metrics.**accuracy_score**
+ - sklearn.ensemble.**RandomForestClassifier**
+ - sklearn.tree.**DecisionTreeClassifier**
+ - sklearn.metrics.**make_scorer**
  - sklearn.model_selection.**cross_val_score**
- - sklearn.metrics.**mean_squared_error**
- - sklearn.ensemble.**RandomForestRegressor**
- - sklearn.linear_model.**LinearRegression**
- - sklearn.dummy.**DummyRegressor**
- - **catboost** 
+ - sklearn.metrics.**roc_curve**
+ - sklearn.preprocessing.**OneHotEncoder**
+ - sklearn.utils.**shuffle**
+ - sklearn.dummy.**DummyClassifier**
+
+boosting
+
+ - **lightgbm**
+ - **CatBoost**
+ - **xgboost**
+
 
 
 ## Общий вывод
 
-Было проведено обучение выбранных моделей для стадий грубой и тонкой очистки, проведена проверка выбранных обученных моделей на тестовом наборе и выбрана одна для запуска в производство.
+Было обучено несколько моделей, гиперпараметры подбирались с помощью Optuna, что заняло какое-то время, но позволило добиться хороших показателей метрик.
