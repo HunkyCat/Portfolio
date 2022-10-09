@@ -4,41 +4,35 @@
 
 ## Описание проекта
 
-Необходимо написать модель, которая должна предсказать кто из клиентов, скорее всего, перестанет пользоваться услугами компании. Модель поможет заранее определять таких клиентов, чтобы у компании была возможность попытаться их удержать ("задобрить" промокодами и специальными условиями).
+Нужно написать модель, которая будет классифицировать комментарии на позитивные и негативные. Таким образом, интернет-магазину будет проще модерировать токсичные комментарии.
 
 ## Навыки и инструменты:
 
  - **pandas**
- - **pandas_profiling**
- - **phik**
- - **plotly**
+ - **numpy** 
+ - **re**
+ - **torch**
+ - **transformers**
+ - **tqdm**
+ - **random**
  - **optuna**
- - **matplotlib**
- - imblearn.over_sampling.**SMOTE**
 
 sklearn
 
- - sklearn.model_selection.**train_test_split**
  - sklearn.linear_model.**LogisticRegression**
- - sklearn.metrics.**roc_auc_score**
- - sklearn.metrics.**accuracy_score**
- - sklearn.ensemble.**RandomForestClassifier**
- - sklearn.tree.**DecisionTreeClassifier**
- - sklearn.metrics.**make_scorer**
- - sklearn.model_selection.**cross_val_score**
- - sklearn.metrics.**roc_curve**
- - sklearn.preprocessing.**OneHotEncoder**
+ - sklearn.model_selection.**train_test_split**
+ - transformers.**BertTokenizer, BertModel**
+ - sklearn.metrics.**f1_score**
  - sklearn.utils.**shuffle**
  - sklearn.dummy.**DummyClassifier**
+ - sklearn.tree.**DecisionTreeClassifier**
 
 boosting
 
  - **lightgbm**
- - **CatBoost**
- - **xgboost**
-
+ - **catboost**
 
 
 ## Общий вывод
 
-Было обучено несколько моделей, гиперпараметры подбирались с помощью Optuna, что заняло какое-то время, но позволило добиться хороших показателей метрик.
+Была обучена модель, которая хорошо справляется с поставленной задачей, однако, возможно и другие методики (TF-IDF или Word2Vec) справились бы не хуже и быстрее.
