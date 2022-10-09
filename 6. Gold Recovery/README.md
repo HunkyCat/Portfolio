@@ -12,6 +12,9 @@
  - **numpy** 
  - **plotly**
  - **plotly.express**
+ 
+ sklearn
+ 
  - sklearn.metrics.**mean_absolute_error**
  - sklearn.ensemble.**BaggingRegressor**
  - sklearn.model_selection.**cross_val_score**
@@ -19,6 +22,7 @@
  - sklearn.ensemble.**RandomForestRegressor**
  - sklearn.linear_model.**LinearRegression**
  - sklearn.dummy.**DummyRegressor**
+ 
  - **catboost** 
 
 
