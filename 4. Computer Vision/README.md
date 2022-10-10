@@ -1,43 +1,36 @@
 
-# Предсказание оттока клиентов
+# Компьютерное зрение. Определение возраста по фото
 
 ## Описание проекта
 
-Необходимо написать модель, которая должна предсказать кто из клиентов, скорее всего, перестанет пользоваться услугами компании. Модель поможет заранее определять таких клиентов, чтобы у компании была возможность попытаться их удержать ("задобрить" промокодами и специальными условиями).
+Сетевой супермаркет хочет внедрить систему компьютерного зрения для определения возраста покупателей. С ее помощью можно настроить рекомендательную систему для отдельных возрастных групп и предотвращать продажу алкоголя (и других взрослых вещей) несовершеннолетним.
 
 ## Навыки и инструменты:
 
  - **pandas**
- - **pandas_profiling**
- - **phik**
- - **plotly**
- - **optuna**
+ - **numpy** 
  - **matplotlib**
- - imblearn.over_sampling.**SMOTE**
+ - **plotly**
 
-sklearn
+keras
 
- - sklearn.model_selection.**train_test_split**
- - sklearn.linear_model.**LogisticRegression**
- - sklearn.metrics.**roc_auc_score**
- - sklearn.metrics.**accuracy_score**
- - sklearn.ensemble.**RandomForestClassifier**
- - sklearn.tree.**DecisionTreeClassifier**
- - sklearn.metrics.**make_scorer**
- - sklearn.model_selection.**cross_val_score**
- - sklearn.metrics.**roc_curve**
- - sklearn.preprocessing.**OneHotEncoder**
- - sklearn.utils.**shuffle**
- - sklearn.dummy.**DummyClassifier**
-
-boosting
-
- - **lightgbm**
- - **CatBoost**
- - **xgboost**
+ - tensorflow.keras.**preprocessing.image.ImageDataGenerator**
+ - tensorflow.keras.**datasets.fashion_mnist**
+ - tensorflow.keras.**applications.resnet.ResNet50**
+ - tensorflow.keras.**layers.Conv2D, Flatten, Dense, MaxPooling2D, AvgPool2D, GlobalAveragePooling2D**
+ - tensorflow.keras.**models.Sequential**
+ - tensorflow.keras.**optimizers.Adam**
 
 
 
 ## Общий вывод
 
-Было обучено несколько моделей, гиперпараметры подбирались с помощью Optuna, что заняло какое-то время, но позволило добиться хороших показателей метрик.
+Построенная модель может ошибаться на, примерно, 6 лет, значит - полность отдавать ей контроль за продажей товаров несовершеннолетним нельзя. А вот для создания рекомендательной системы по возрастным группам она подойдет.
+
+### Параметры модели:
+ - **optimizer = Adam(lr=0.0001)**
+ - **функия потерь - MSE**
+ - **Архитектура ResNet50 с weights='imagenet'**
+ - **один полносвязный слой 1024 нейрона с активацией relu**
+ - **второй полносвязный слой с 5 нейронами с активацией relu**
+ - **50 эпох**
