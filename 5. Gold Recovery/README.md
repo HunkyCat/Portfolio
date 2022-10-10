@@ -11,7 +11,7 @@
  - **pandas** 
  - **numpy** 
  - **plotly**
- - **plotly.express**
+ - plotly.**express**
  
  sklearn
  
@@ -22,6 +22,8 @@
  - sklearn.ensemble.**RandomForestRegressor**
  - sklearn.linear_model.**LinearRegression**
  - sklearn.dummy.**DummyRegressor**
+ 
+ boosting
  
  - **catboost** 
 
