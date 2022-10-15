@@ -1,5 +1,9 @@
 # My stuff
 
+<center><h1>Yandex.Praktikum Data Science Projects</h1></center>
+<a href="https://praktikum.yandex.ru/"><img width=100% src="https://miro.medium.com/max/1400/0*uVP0WwEWOtpHs40E.png"></a><br><br>
+<p align=center>
+
 Здесь собраны некоторые реализованные проекты, если открыть папку проекта, то будет чуть более подробное описание.
 
 | #    | Наименование проекта                | Описание                                                     | Стек                                                         |
